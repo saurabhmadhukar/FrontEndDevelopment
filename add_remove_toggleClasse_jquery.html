@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .red{
+            color:red;
+        }
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Welcome</h1>
+            <p class="red blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque in aliquid assumenda quam modi, accusantium dolorem aliquam, non fuga laudantium reiciendis id nihil inventore debitis? Repellat cumque odio doloremque aliquam.</p>
+        </div>
+            <button id="add_class">Add class</button>
+            <button id="remove_class">remove class</button>
+            <button id="toggle_class">toggle class</button>
+    </div>
+        <script>
+            $('document').ready(function(){
+                $('#add_class').click(function(){
+                    $('p').addClass('blue')
+                });
+                $('#remove_class').click(function(){
+                    $('p').removeClass('blue')
+                });
+                $('#toggle_class').mouseenter(function(){
+                    $('p').toggleClass('blue')
+                })
+            })
+        </script>
+</body>
+</html>
