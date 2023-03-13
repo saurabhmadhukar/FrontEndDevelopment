@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian jquery</title>
+    <style>
+        .course-title{
+            padding:5px;
+            border-radius: 5px 5px 0px 0px;
+            text-align: center;
+            font-size: 20px;
+            color:black;
+            cursor: pointer;
+            background-color: rgb(18, 158, 252);
+            border-bottom: 1px solid white;
+        }
+        .course-title:hover{
+            color:white;
+        }
+        .course-content{
+            border:1px grey solid;
+            border-top: none;
+            border-radius: 0px 0px 5px 5px;
+            color:grey;
+            display: none;
+        }
+        .course-box{
+            height: 100%;
+        }
+        p {
+    margin: 0px;
+    padding: 8px;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="column-12 course-title">
+                             Python Learning
+            </div>
+            <div class="column-12 course-content" style="display: block;">
+                <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia soluta itaque nam aperiam incidunt, mollitia quod nulla asperiores consectetur dolor non, delectus rem, vero ut expedita? Ab unde mollitia eum.
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ut expedita cumque architecto ea! Pariatur soluta deleniti libero eius, molestias laudantium sed. Nemo non molestias ullam beatae? In, ipsum? Sunt.</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column-12 course-title">
+                             Javascript Learning
+            </div>
+            <div class="column-12 course-content">
+                <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia soluta itaque nam aperiam incidunt, mollitia quod nulla asperiores consectetur dolor non, delectus rem, vero ut expedita? Ab unde mollitia eum.
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ut expedita cumque architecto ea! Pariatur soluta deleniti libero eius, molestias laudantium sed. Nemo non molestias ullam beatae? In, ipsum? Sunt.</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column-12 course-title">
+                             Machine Learning
+            </div>
+            <div class="column-12 course-content">
+                <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia soluta itaque nam aperiam incidunt, mollitia quod nulla asperiores consectetur dolor non, delectus rem, vero ut expedita? Ab unde mollitia eum.
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ut expedita cumque architecto ea! Pariatur soluta deleniti libero eius, molestias laudantium sed. Nemo non molestias ullam beatae? In, ipsum? Sunt.</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column-12 course-title">
+                             Full Stack development Learning
+            </div>
+            <div class="column-12 course-content">
+                <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia soluta itaque nam aperiam incidunt, mollitia quod nulla asperiores consectetur dolor non, delectus rem, vero ut expedita? Ab unde mollitia eum.
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ut expedita cumque architecto ea! Pariatur soluta deleniti libero eius, molestias laudantium sed. Nemo non molestias ullam beatae? In, ipsum? Sunt.</p>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('document').ready(function(){
+        $('.course-title').click(function(){
+            $('.course-content').slideUp(500)
+            $(this).next('.course-content').slideToggle(500)
+        })
+    })
+    console.log("kk")
+</script>
+</body>
+</html>
