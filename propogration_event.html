@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Event Properties </title>
+    <style>
+        body{
+            margin:0 auto;padding:16px
+
+        }
+        div{
+            width:400px;
+            background-color: rgb(255, 166, 0);
+            height: 250px;
+            display: flex;
+            align-items: left;
+            justify-self:center;
+            flex-direction: column;
+            padding:16px;
+            
+
+        }
+        h1{
+            color:rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <div><h1>Hello World</h1>
+    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit mollitia quo explicabo officiis reprehenderit sint eius, at ut porro deserunt eos neque, tempora culpa numquam dolorem eum nihil sed.</p>
+<button>Click  here</button>
+    <h3></h3>
+ 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/Javascript">
+         $('document').ready(function(){
+            $("div").click(function(){
+                alert("hello div is clicked");
+              
+            });
+            $("h1").click(function(event){
+                alert("hello i'm h1 element");
+                event.stopPropagation();
+                console.log(event.isPropagationStopped())
+            });
+            $("button").click(function(event){
+                alert("Button Clicked");
+                event.stopPropagation();
+            })
+         })
+    </script>
+</body>
+</html>
